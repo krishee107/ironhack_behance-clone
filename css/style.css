@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Acumin Pro';
-    src: url("/fonts/Acumin-RPro.woff") format("woff2")
+    src: url("../fonts/Acumin-RPro.woff") format("woff2")
     }
     
 
@@ -49,11 +49,14 @@ nav ul {
     grid-template-columns: repeat(5,auto);
     list-style: none;
     align-items: center;
+    margin: 1px;
 }
 li {
     margin-right: 24px;
     font-size: 16px;
     font-weight: 600;
+}li:hover {
+    border-bottom: 1px solid beige;
 }
 #buscador {
     width: 25%;
@@ -79,7 +82,10 @@ li {
 
 #ico {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0px 1%;
 }
 
 #logoAdobe{
@@ -112,6 +118,12 @@ li {
 
 .box {
     overflow: hidden;
+}
+
+.box:hover {
+    cursor: pointer;
+    filter: brightness(70%);
+    transition: 1.5s;
 }
 
 .box img {
@@ -167,7 +179,6 @@ aside {
 /* Botones*/
 #botones {
     display: grid;
-    gap: 10px;
     font-size: 20px;
     cursor: pointer;
 }
@@ -177,14 +188,31 @@ aside {
     color: white;
 }
 
-#botones div {
+#follow:hover {
+    background: #043fb1;
+}
+
+#botones div:not(.ico):not(.text) {
     margin: 5px;
     border-radius: 25px;
-    padding: 5px;
-    line-height: 40px;
+    padding: 9.5px 18px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    align-items: center;
+}#botones .ico {
+    text-align: right;
+}
+
+#botones .text {
+    text-align: left;
 }
 
 #mensaje {
     color: #0057ff;
     border: 1px solid #0057ff;
+}
+
+#mensaje:hover {
+    background: #e8f0ff;
 }
